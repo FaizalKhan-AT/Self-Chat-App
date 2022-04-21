@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Chat bot in js</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="chat-container">
-		<div class="chat-head">
-			<h3 class="title">Chat Bot</h3>
-		</div>
-		<div class="chat-body">
-			
-		</div>
-		<div class="chat-input">
-			<input type="text" class="textInput" placeholder="Ask questions to the Bot ?">
-			<button type="button" class="submit-btn">Send</button>
-		</div>
-	</div>
-	<script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Chat app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-head">
+        <h3 class="title"></h3>
+        <div class="menu" title="menu">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <ul class="menu-open">
+          <li>Desktop Mode</li>
+          <li>Mobile Mode</li>
+          <li>Change Chat Wallpaper</li>
+          <input type="file" hidden id="wallpaper" accept="img/*" />
+        </ul>
+      </div>
+      <div class="chat-body"></div>
+      <div class="chat-input">
+        <textarea class="textInput disabled" placeholder="Message"></textarea>
+        <button
+          type="button"
+          id="btn-other"
+          title="reply"
+          class="submit-btn other disabled"
+        >
+          <img src="./Assets/send.svg" width="20" alt="" />
+        </button>
+        <button
+          type="button"
+          id="btn-me"
+          title="send"
+          class="submit-btn me disabled"
+        >
+          <img src="./Assets/send.svg" width="20" alt="" />
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
